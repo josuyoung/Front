@@ -1,0 +1,105 @@
+박스모델(Box Model)
+- 모든 HTML 요소는 박스모양으로 구성
+- 박스모델이라고 부름
+- 박스모델은 HTML 요소를 내용, 패딩, 테두리, 마진으로 구분
+
+내용 (Content)
+- 텍스트나 이미지가 들어있는 박스의 실질적인 내용 부분
+
+패딩(Padding)
+- 내용과 테두리 사이의 간격
+- padding-top, padding-right, padding-bottom, padding-left
+- padding : 모든 패딩 속성을 한꺼번에 설정가능, 방향을 위에서 시계방향
+
+.div { padding: 10px 20px 30px 40px ; }
+                상 우 하 좌
+.div { padding: 10px 20px 30px ; }
+                상  좌우    하
+.div { padding: 20px  30px ; }
+                상하   좌우
+.div { padding: 10px; }
+                상하좌우
+
+테두리(border)
+- 내용(content)과 패딩(Padding) 주변을 감싸는 테두리
+- border-style : 테두리를 다양한 모양으로 설정(solid, dotted, dashed, double..etc)
+- border-color : 테두리 색상을 설정
+- border-width : 테두리 두께 설정
+- border : 모든 테두리 속성을 한꺼번에 설정, 방향은 상단에서 시작해서 시계방향으로
+
+
+
+
+마진(margin)
+- 테두리(border)와 이웃하는 요소사이의 간격
+- 마진은 눈에 보이지 않음
+
+* 세로 겹침 현상
+세로로 나열된 두 박스의 간격은 두 마진의 합이 아니라 둘 중 큰 값을 선택
+
+박스사이징(box-sizing)
+- width, height 값에 padding이나 border 영역은 포함되지 않음
+- 만약 width가 100%로 설정되었을 경우 padding이나 border 속성을 추가할 수 없음
+box-sizing 속성을 추가 -> padding과 border를 width와 height값에 포함
+    content-box  : 기존 계산법, width와 height 값에 padding과 border를 포함하지 않음
+    border-box : width와 height값에 padding과 border를 포함
+    p { box-sizing : border-box;}
+
+둥근 테두리 만들기
+- border-radius
+    border-radius
+
+
+    border-radius : top-x bottom-x/ top-y bottom-y
+    
+    border-radius: xy
+
+테이블 테두리 설정 (border-collapse)
+- separate(default), collapse(셀들을 합쳐서 사이의 공백음 없앰)
+-separate(기본, 셀들을 분리), collapse(셀들을 합쳐서 사이의 공백을 없앰)
+
+css display
+- 웹 페이지의 레이아웃을 결정하는 속성
+- block : display 속성값이 블록인 요소는 새로운 라인에서 시작하고, 해당라인의 모든 너비를 차지
+-inline : display 속성값이 인라인인 요소는 새로운 라인에서 시작되지 않음
+-inline-block : block과 inline 속성을 모두 사용
+    - width, height를 적용
+    - padding과 margin을 적용
+    - line-height를 적용
+    - 요소를 가로로 나열된
+- none : 웹 페이지에서 해당 요소가 나타나지 않고 레이아웃에서 사라짐
+
+* visibility: hidden; (visible)
+
+아이디: [         ] [아이디 중복체크]
+아이디를 사용할 수 없습니다.
+비밀번호 : [       ]
+
+css 폼
+- 폼요소의 스타일을 설정
+- input[type='text']:focus : 폼 요소가 포커스를 가지고 있을 때 스타일을 설정
+- corsor : pointer : 커서 모양을 설정
+
+css Position
+- 요소의 위치를 결정하는 방식을 설정
+
+1. 정적(static)위치 지정방식
+- default
+- HTML 요소의 위치를 결정하는 기본적인 방식
+- top, left, right, bottom 속성값을 사용할 수 없음
+- 단순히 웹 페이지의 흐름에 따라 차례대로 요소들의 위치를 결정하는 방식
+
+2. 상대(relative)위치 지정 방식
+- HTML 요소의 기본 위치를 기준으로 위치를 재설정하는 방식
+- 기본 위치는 정적위치 지정방식일 때 결정되는 위치를 의미
+
+
+3. 고정(fixed)위치 지정 방식
+- 뷰포트를 기준으로 위치를 설정하는 방식
+- 웹 페이지가 스크롤 되어도 고정위치로 지정된 요소는 항상 같은 곳에 위치
+
+
+4. 절대(absolute)위치 지정방식
+- 뷰포트를 기준으로 위치를 설정하는 방식
+- 조상요소를 기준으로 위치를 지정할 수 있음
+- 조상요소를 가지지 않으면 body 요소를 기준으로 위치를 결정

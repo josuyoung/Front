@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <form action="regist_ok.php" method ="post"> 
+    <p><label>
+        아이디:<input type="text" name="userid" id="userid" size="20" maxlength="20" placeholder="아이디를 입력하세요">
+        
+    </label></p>
+    <p><label>
+        비밀번호 입력:<input type="password" name="userpw" id="userpw" maxsize="20" size="20" placeholder="비밀번호를 입력하세요">
+        
+    </label></p>    
+    <p><label>
+        비밀번호 확인:<input type="password" name="userpw_re" id="userpw_re" maxsize="20" size="20" placeholder="비밀번호를 입력하세요">
+        
+    </label></p>
+    <p><label>
+        <input type="text" name="name" id="name" size="20" maxlength="20" placeholder="이름입력">이름:
+    </label></p>
+    <p>성별:<label>
+         <input type="radio" name="gender" value="남자">남자<input type="radio" name="gender" value="여자">여자
+    </label></p>
+    <p>취미:<label>
+        코딩 <input type="checkbox" value="코딩" name="hobby"> 스쿼시 <input type="checkbox" value="코딩" name="hobby"> 놀기 <input type="checkbox" value="코딩" name="hobby"> 게임 <input type="checkbox" value="코딩" name="hobby">
+    </label></p>
+    <p>주민번호:<label>
+        <input type="text" maxlength="6" size="6" name="ssn1">- <input type="text" maxlength="7" size="7" name="ssn2"><input type="button" value = "검증">
+    </label></p>
+    <p>
+        <label>
+            우편번호: <input type="text" maxlength="20" size="7" name="zipzode" readonly> <input type="button" value="우편번호 검색">
+        </label>
+    </p>
+    <label>
+        <input type="submit" value="가입완료"> <input type="reset" value="다시작성">
+    </label>
+    </form>
+</body>
+</html>

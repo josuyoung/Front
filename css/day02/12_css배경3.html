@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 배경 - 3</title>
+    <style>
+        div {
+            width: 60%;
+            height: 300px;
+            border : 3px dotted deeppink;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .bg1 { 
+            background-image: url(./cat.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        .bg2{
+            background-image: url(./cat.png);
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+        .bg3{
+            background-image: url(./cat.png);
+            background-repeat: no-repeat;
+            background-position: -10% 50px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h2>css 배경 - 3</h2>
+    <div class="bg1">
+        <h2>backgound-position 1</h2>
+        <p></p>
+    </div>
+    <div class="bg2">
+        <h2>backgound-position 2</h2>
+        <p></p>
+    </div>
+    <div class="bg3">
+        <h2>backgound-position 3</h2>
+        <p></p>
+    </div>
+</body>
+</html>
