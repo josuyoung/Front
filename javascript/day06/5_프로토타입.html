@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+</head>
+<body>
+    <h2>프로토타입</h2>
+    <script>
+        'use strict'
+        function Dog(name,age,color){
+            this.name = name;
+            this.age = age;
+            this.color = color
+
+        }
+
+        const Rucy = new Dog("루시",11,"흰색");
+        console.log(`이름 : ${Rucy.name}`);
+        console.log(`나이 : ${Rucy.age}`);
+        console.log(`색상 : ${Rucy.color}`);
+        console.log(Rucy)
+
+        Rucy.family = "포메";
+        Rucy.run = function(){
+            return `${this.name}은(는) 달린다.`
+        }
+        console.log(`종은 : ${Rucy.family}`);
+        console.log(`기능 : ${Rucy.run}`);
+
+        const ppo = new Dog("뽀미",5,"흰색");
+        console.log(`이름 : ${ppo.name}`)
+        console.log(`이름 : ${ppo.age}`)
+        console.log(`이름 : ${ppo.color}`)
+        console.log(`종 : ${ppo.family}`)
+        // console.log(`기능 : `ppo.run()) // error
+
+        Dog.prototype.weight = 3.5;
+        Dog.prototype.eat = function(){
+            return `${this.name}이 먹습니다`
+        }
+        console.log(`루시의 몸무게 : ${Rucy.weight}`);
+        console.log(`${Rucy.eat()}`);
+        console.log(`뽀의 무게 : ${ppo.weight}`)
+
+
+
+    </script>
+</body>
+</html>

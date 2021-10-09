@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math객체</title>
+</head>
+<body>
+    <h2>Math객체</h2>
+    <script>
+        const num1 = 123.745566;
+        'use strict';
+        console.log(Math.min());
+        console.log(Math.max());    //-infinity
+        console.log(Math.min(-1,-12,123,45));
+        console.log(Math.min(-1,'-12',123,45));
+        console.log(Math.min(-1,'-12',"백이십삼",45));
+
+
+        console.log(Math.round(123.6));
+        console.log(Math.floor(123.9));
+        console.log(Math.ceil(10.1));
+        
+        const ran1 = Math.random();
+        
+        console.log(`1~10사이의 랜덤한 수 :${Math.floor(ran1*10+1)}`)
+        
+        const ran2 = Math.random();
+        console.log(`1~45사이의 랜덤한 수 :${Math.floor(ran2*45+1)}`)
+        
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스터</title>
+    <script>
+        'use strict';
+        window.onload = function(){
+            const btn = document.getElementById('eventBtn');
+            btn.addEventListener('click',clickBtn); //클릭이 되면 clickBtn함수 호출
+            btn.addEventListener('mouseover', mouseOverBtn);    // 마우스가 위로 올라오면 mouseOverBtn 함수 선언
+            btn.addEventListener('mouseout', mouseOutBtn);
+
+        }
+        const clickBtn = function(){
+            document.getElementById('text').innerHTML = '<b> 버튼을 클릭했어요</b>';
+
+        }
+        const mouseOverBtn = function(){
+            document.getElementById('text').innerHTML = '<b> 버튼위에 마우스가 올라갔어요</b>';
+                
+        }
+        const mouseOutBtn = function(){
+            document.getElementById('text').innerHTML = '<b> 버튼 밖으로 마우스가 나갔어요</b>';
+
+        }
+        const delEvent = function(){
+            const btn = document.getElementById('eventBtn');
+            btn.removeEventListener('click', clickBtn);
+            btn.removeEventListener('mouseover', mouseOverBtn);
+            btn.removeEventListener('mouseout',mouseOutBtn);
+            document.getElementById('text').innerHTML = '<b> 이벤트 리스터가 삭제됐어요</b>';
+        }
+    </script>
+</head>
+<body>
+    <h2>이벤틀 리스터</h2>
+    <p><button id="eventBtn">이벤트 버튼</button></p>
+    <p><button id="delBtn" onclick = "delEvent()"> 이벤트 삭제 버튼</button></p>
+    <p id="text"></p>
+
+</body>
+
+</html>

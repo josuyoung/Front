@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+</head>
+<body>
+    <h2>클래스</h2>
+    <script>
+        'use strict';
+        const Dog = class {
+            constructor(name,age,color){
+                this.name = name;
+                this.age = age;
+                this.color = color;
+
+            }
+            play(){
+                return`${this.name}이(가) 논다`;
+            }
+        }
+
+        const Rucy = new Dog("rucy",11,"white");
+        console.log(Rucy.name)
+        console.log(Rucy.age)
+        console.log(Rucy.color)
+        console.log(Rucy.play())
+
+        const ggongzi = new Dog("꽁지",13,"white");
+        console.log(ggongzi.age)
+        console.log(ggongzi.name)
+        console.log(ggongzi.color)
+        console.log(ggongzi.play())
+        
+        
+    </script>
+</body>
+</html>

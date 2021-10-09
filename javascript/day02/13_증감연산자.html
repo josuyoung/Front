@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+
+</head>
+<body>
+    <h2>증감연산자</h2>
+    <script>
+        'use strict';
+        let num1 = 10;
+        console.log(`현재 num1의 값 : ${num1}`) //10
+        console.log( `++num1의 값 : ${++num1}`) //11
+        console.log(`현재 num1의 값 : ${num1}`) //11
+        console.log( `++num1의 값 : ${num1++}`)     // 출력하고 더해줘 11
+        console.log(`현재 num1의 값 : ${num1}`) //
+        
+        let num2 = 10;
+        let num3 = ++num2;  // 값을 더해서 넣어줭
+        console.log(`현재 num2의 값 : ${num2}, 현재 num3의 값 : ${num3}`) // 11 11
+        let num4 = num2++;  // 값을 넣어놓고 더해줭~
+        console.log(`현재 num2의 값 : ${num2}, 현재 num4의 값 : ${num4}`)
+
+    </script>
+</body>
+</html>
+
+const num1 = 10
+const num2 = num1++ 
+const num3 = ++num1

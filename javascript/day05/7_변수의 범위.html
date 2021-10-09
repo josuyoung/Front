@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 범위</title>
+</head>
+<body>
+    <h2>변수의 범위</h2>
+    <script>
+        'use strict'
+        var num1 = 10;
+        function func1(){
+            console.log(num1);  
+            num1 = 20;      //전역변수 값을 재대입
+        }
+        func1();
+        console.log(num1)
+
+        var num2 = 30;
+
+        function func2(){
+            var num2 = 40;  //지역변수 같은이름의 전역변수 사용하지 않겟다
+            console.log(`num2 : ${num2}`);
+        }
+        func2();
+        console.log(num2)
+
+        var num3 = 50;  //전역변수
+        if(num3){
+            num3 = 100; //전역변수 재대입 : 50 -> 100
+            console.log(`num3 : ${num3}`);
+
+        }
+        console.log(num3)
+
+        //이게 문제(버그) * let쓰면 ㄱㅊ
+        let num4 = 50;  //전역
+        if(num4){
+            let num4 = 100;
+            console.log(`num4 : ${num4}`);
+        }
+        console.log(`num4 : ${num4}`);
+
+    </script>
+</body>
+</html>

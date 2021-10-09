@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적</title>
+</head>
+<body>
+    <h2>성적</h2>
+    <script>
+        'use strict'
+        const name = prompt("이름을 입력하세요")
+        const kor = Number(prompt("국어점수는?"));
+        const math = Number(prompt("수학점수는?"));
+        const eng = Number(prompt("영어점수는?"));
+        const sum = kor + math + eng;
+
+        console.log(`${name}님의 성적표`);
+        console.log(`국어점수 ${kor}, 수학점수${math}, 영어점수${eng}`);
+        console.log(`총점은 ${sum}, 평균은${sum/3}입니다`);
+        </script>
+</body>
+</html>

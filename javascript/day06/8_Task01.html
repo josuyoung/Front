@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 게임</title>
+</head>
+<body>
+    <h2>주사위 게임</h2>
+    <script>
+        'use strict'
+        
+        
+        
+        while (true){
+            let num1 = Math.floor(Math.random()*45) + 1;
+            let num2 = Number(prompt("숫자를 입력하세용"));
+            if (num1 == num2){
+                alert(`정답은 ${num1} 너의 답은 ${num2} 정답!`);
+                break
+            }
+            else{
+                alert(`정답은 ${num1} 너의 답은 ${num2} 오답!` );
+
+
+            }
+        }
+    </script>
+</body>
+</html>

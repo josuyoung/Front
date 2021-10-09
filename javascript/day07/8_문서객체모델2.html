@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델2</title>
+</head>
+<body>
+    <h2>문서객체모델2</h2>
+    <script>
+        'use strict';
+        window.onload = function(){
+            const gnb = document.getElementById('gnb');
+            console.log(gnb)
+            console.log(gnb.parentNode)     //div
+            console.log(gnb.children[0])    //ul
+            console.log(gnb.children[0].nextElementSibling) // null
+            console.log(gnb.children[0].children[1])    //내용 2
+            console.log(gnb.children[0].children[1].nextElementSibling) //내용 3
+            console.log(gnb.children[0].firstChild) //#text 싹다 주석 텍스트 엘리먼트 다 찾음 그러므로 띄어 쓰기 + 엔터가 있기에 #text가 출력
+            console.log(gnb.children[0].firstElementChild) //내용 1
+        }
+    </script>
+    <div>
+        <nav id="gnb">
+            <ul><li class="first">내용 1</li>   <!-- 이렇게 쓰면 내용 1나옴-->
+                <li>내용 2</li>    
+                <li>내용 3</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

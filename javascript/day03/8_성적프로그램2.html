@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점 계산기</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        const name = prompt("이름을 입력하세요");
+        const kor = Number(prompt("국어점수:"));
+        const eng = Number(prompt("영어점수:"));
+        const math = Number(prompt("수학점수:"));
+        //쌤 방식 let score = "";
+        const tot = kor + eng + math;
+        const avg = tot / 3
+        console.log(`${name}님의 성적표`);
+        console.log(`국어점수 ${kor}, 수학점수${math}, 영어점수${eng}`);
+        console.log(`총점은 ${tot}, 평균은${avg}입니다`);
+        if(avg >= 90){
+            console.log("A")
+            //score = "A"
+        }else if(avg >= 80){
+            console.log("B")
+        }else if(avg >= 70){
+            console.log("C")
+        }else if(avg >= 60){
+            console.log("D")
+        }else{
+            console.log("F")
+        }
+        console.log("입니다")
+
+        // console.log(`${name}님의 성적표`);
+        // console.log(`국어점수 ${kor}, 수학점수${math}, 영어점수${eng}`);
+        // console.log(`총점은 ${tot}, 평균은${avg}입니다`);
+        // console.log(`학점은 ${score}입니다`);
+
+        //**중괄호안에서 선언한 변수는 그 밖을 나오면 사라진다
+        // 그러나 전역에서 선언한 변수를 변경하는 것은 가능하다
+    </script>
+</body>
+</html>
