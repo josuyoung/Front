@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우선순위</title>
+  <style>
+    
+        #id-style-with-important { background-color: yellow !important; }
+        #id-style { background-color: blue; }
+        #id-style-2 {
+            background-color: skyblue;
+            margin: 50px;
+            padding: 50px;
+        }
+        .class-style {
+            background-color: red;
+        }
+        div {
+            display: block;
+            padding: 30px;
+            margin: 30px;
+            background-color: white;
+        }
+        div {
+            background-color: purple;
+        }
+        ul > li.li-class {
+            background-color: salmon;
+            color: deeppink;
+        }
+        ul { color: black; }
+        ul > li { color: aqua; }
+  
+
+  </style>
+</head>
+<body>
+  <h2>우선순위</h2>
+  <div id ="id-style" id ="id-style-with-important"  class="class-style" >div 1번</div>
+  <div style="background-color: green;" id="id-style" class="class-style">div 2번 인라인 1짱</div>
+  <div id="id-style">div 3번</div>
+  <div class="class-style">div 4번</div>
+  <div>5번 마지막에 적용된 스타일</div>
+  <div id="id-style-2" id ="id-style">div6번 아이디나 클래스는 먼저 적용한 속성</div>
+  <ul>
+    <li class="li-class">li 1번</li>
+  </ul>
+
+</body>
+</html>
